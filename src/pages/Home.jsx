@@ -1,3 +1,4 @@
+import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
@@ -64,6 +65,114 @@ const testimonials = [
 const firstColumn = testimonials.slice(0, 3)
 const secondColumn = testimonials.slice(3, 6)
 const thirdColumn = testimonials.slice(6, 9)
+
+const portfolioImages = [
+  { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC-vooRcpplpKyVhS_A6bF695qICy55a1Zo8BhABkLeNFZVhNHLihi_gQdTVPJyvA6xj060iTnVEnkQHk55zzPPCZejwskCLiHOLdYSpb7WWgjIyoSkAvjWs_31ppONiI_wQ1KX7aIUaF3bLzBpif7REJIuaGH_36CXUV0UI-3desVS0xuidExl8EWC88qgQXURpoO4SuBidJLFuAcBIEqLcot96J_uGSZ-THBJg4HVQYNvsx8IMgOxjB0YCezVG5t2Krbw0E38-VbZ', alt: 'Elegant dark emerald nail polish', size: 'tall' },
+  { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBdXXJTdIl1ilfYcj0yeiBhj95BFT6oi9KtsZb6BQoczrFXF2rjVfI6ivivPVblP14B-Qs7-9CJQhoH5rd1idpCFYfoQLXywO1QNU8P1jhXwpfL_EdZxhb2z9JEdn1pHBG-XNAtvtmdm2VAiXoIxyyMUlAXBLARRCC_pvOOQExLhnTt-YMJM_K3HIzkhqloVhTNgVxfwSC8ZJvE6uoM7GQ3lCerHajyieJDQnyd32XIt0C32xhCJbTHFy9Q-Nisee_8nPiUjtq41h3f', alt: 'Soft nude manicure', size: 'short' },
+  { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD-RosVlrGyaW6cH0D-d2y9BaLVNk_PnvC_bNfewBao4FfWF9bE-DaBY7wAQIUN9VrR6jMr28TdTqoKij1ELpyQK0csqa24hOd2Js029jDMUjuyzvrmGGbCaDD8ZfsYwb0Nsy1cB-lTgzZkvGVvEg2Dc5TvPpPytO7y3O4WI9vQXR9GJ3yO2prkreu1n9cMm1LxLOkgG9wx4qZj9jtjk6WMzQIc7SFgJBnQV1Ocirgjxx3tuvIRRLmEZMLX7JUjtnLJSZ7IKr4KO-dK', alt: 'Modern french manicure', size: 'tall' },
+  { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDKvK0CMi9CZ2I_3_o5W-WZiKqZb8unsa5i9ysjJxXoByquFVIx42EphNbZlie8e8_S4nFGr2eTNWnbL_b75KGglamD_7uRKmc-s2_fPv1PTNFlxHEL_a1BNnzYf2Pe874sxdVTb290aopalGzY81C1apH1mFzocs3jCoQChYtpbk40I4jQs03IrAV9W6Z4ylLl23R61kruSRz9oehLPtfbypK3m6L2pwDZyvzA30sh1l8KpufCaPVYtZlp1Odojc7xoidKemPlAnhS', alt: 'Burgundy nails marble sphere', size: 'short' },
+  { src: '/images/manicure.jpg', alt: 'Classic manicure', size: 'short' },
+  { src: '/images/pedicure-spa.jpg', alt: 'SPA pedicure', size: 'tall' },
+  { src: '/images/Generated Image March 24, 2026 - 1_13PM.jpg', alt: 'Nail art', size: 'short' },
+  { src: '/images/salon-interior.jpg', alt: 'Salon interior', size: 'short' },
+]
+
+function PortfolioSection() {
+  const [current, setCurrent] = useState(0)
+  const touchStartX = useRef(null)
+
+  const prev = () => setCurrent(i => (i - 1 + portfolioImages.length) % portfolioImages.length)
+  const next = () => setCurrent(i => (i + 1) % portfolioImages.length)
+
+  const onTouchStart = (e) => { touchStartX.current = e.touches[0].clientX }
+  const onTouchEnd = (e) => {
+    if (touchStartX.current === null) return
+    const dx = e.changedTouches[0].clientX - touchStartX.current
+    if (dx < -40) next()
+    else if (dx > 40) prev()
+    touchStartX.current = null
+  }
+
+  return (
+    <section className="bg-white py-24">
+      <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16 gap-4 md:gap-8">
+          <div>
+            <h2 className="font-serif-authority text-4xl md:text-5xl text-on-background mb-3 md:mb-4">Портфолио</h2>
+            <p className="font-serif-editorial italic text-xl md:text-2xl text-tertiary">Нашата работа говори сама за себе си</p>
+          </div>
+          <Link to="/gallery" className="text-primary border-b border-primary/30 pb-1 font-sans-ui tracking-widest uppercase text-sm hover:text-secondary hover:border-secondary transition-all self-start md:self-auto">
+            Виж всички проекти
+          </Link>
+        </div>
+
+        {/* Mobile slider */}
+        <div className="md:hidden relative">
+          <div
+            className="overflow-hidden rounded-lg"
+            style={{ height: '340px' }}
+            onTouchStart={onTouchStart}
+            onTouchEnd={onTouchEnd}
+          >
+            <img
+              key={current}
+              className="w-full h-full object-cover"
+              src={portfolioImages[current].src}
+              alt={portfolioImages[current].alt}
+              style={{ transition: 'opacity 0.3s ease' }}
+            />
+          </div>
+
+          {/* Prev / Next arrows */}
+          <button
+            onClick={prev}
+            className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full flex items-center justify-center"
+            style={{ background: 'rgba(255,255,255,0.85)', boxShadow: '0 2px 12px rgba(0,0,0,0.15)' }}
+            aria-label="Previous"
+          >
+            <span className="material-symbols-outlined" style={{ fontSize: '1.2rem', color: '#524341' }}>chevron_left</span>
+          </button>
+          <button
+            onClick={next}
+            className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full flex items-center justify-center"
+            style={{ background: 'rgba(255,255,255,0.85)', boxShadow: '0 2px 12px rgba(0,0,0,0.15)' }}
+            aria-label="Next"
+          >
+            <span className="material-symbols-outlined" style={{ fontSize: '1.2rem', color: '#524341' }}>chevron_right</span>
+          </button>
+
+          {/* Dot indicators */}
+          <div className="flex justify-center gap-1.5 mt-4">
+            {portfolioImages.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className="rounded-full transition-all duration-300"
+                style={{
+                  width: i === current ? '20px' : '6px',
+                  height: '6px',
+                  background: i === current ? '#894e46' : 'rgba(137,78,70,0.25)',
+                }}
+                aria-label={`Slide ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop masonry grid */}
+        <div className="hidden md:block">
+          <div className="masonry-grid">
+            {portfolioImages.map((img, i) => (
+              <div key={i} className={`masonry-item-${img.size} bg-surface-container overflow-hidden rounded-lg`}>
+                <img className="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" src={img.src} alt={img.alt} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
 
 export default function Home() {
   return (
@@ -296,45 +405,7 @@ export default function Home() {
       <div className="h-32 bg-gradient-to-b from-background via-surface-container-low to-white"></div>
 
       {/* Portfolio Section */}
-      <section className="bg-white py-24">
-        <div className="max-w-screen-2xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-            <div>
-              <h2 className="font-serif-authority text-5xl text-on-background mb-4">Портфолио</h2>
-              <p className="font-serif-editorial italic text-2xl text-tertiary">Нашата работа говори сама за себе си</p>
-            </div>
-            <Link to="/gallery" className="text-primary border-b border-primary/30 pb-1 font-sans-ui tracking-widest uppercase text-sm hover:text-secondary hover:border-secondary transition-all">
-              Виж всички проекти
-            </Link>
-          </div>
-          <div className="masonry-grid">
-            <div className="masonry-item-tall bg-surface-container overflow-hidden rounded-lg">
-              <img className="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-vooRcpplpKyVhS_A6bF695qICy55a1Zo8BhABkLeNFZVhNHLihi_gQdTVPJyvA6xj060iTnVEnkQHk55zzPPCZejwskCLiHOLdYSpb7WWgjIyoSkAvjWs_31ppONiI_wQ1KX7aIUaF3bLzBpif7REJIuaGH_36CXUV0UI-3desVS0xuidExl8EWC88qgQXURpoO4SuBidJLFuAcBIEqLcot96J_uGSZ-THBJg4HVQYNvsx8IMgOxjB0YCezVG5t2Krbw0E38-VbZ" alt="elegant dark emerald nail polish" />
-            </div>
-            <div className="masonry-item-short bg-surface-container overflow-hidden rounded-lg">
-              <img className="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdXXJTdIl1ilfYcj0yeiBhj95BFT6oi9KtsZb6BQoczrFXF2rjVfI6ivivPVblP14B-Qs7-9CJQhoH5rd1idpCFYfoQLXywO1QNU8P1jhXwpfL_EdZxhb2z9JEdn1pHBG-XNAtvtmdm2VAiXoIxyyMUlAXBLARRCC_pvOOQExLhnTt-YMJM_K3HIzkhqloVhTNgVxfwSC8ZJvE6uoM7GQ3lCerHajyieJDQnyd32XIt0C32xhCJbTHFy9Q-Nisee_8nPiUjtq41h3f" alt="soft nude manicure" />
-            </div>
-            <div className="masonry-item-tall bg-surface-container overflow-hidden rounded-lg">
-              <img className="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-RosVlrGyaW6cH0D-d2y9BaLVNk_PnvC_bNfewBao4FfWF9bE-DaBY7wAQIUN9VrR6jMr28TdTqoKij1ELpyQK0csqa24hOd2Js029jDMUjuyzvrmGGbCaDD8ZfsYwb0Nsy1cB-lTgzZkvGVvEg2Dc5TvPpPytO7y3O4WI9vQXR9GJ3yO2prkreu1n9cMm1LxLOkgG9wx4qZj9jtjk6WMzQIc7SFgJBnQV1Ocirgjxx3tuvIRRLmEZMLX7JUjtnLJSZ7IKr4KO-dK" alt="modern french manicure" />
-            </div>
-            <div className="masonry-item-short bg-surface-container overflow-hidden rounded-lg">
-              <img className="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKvK0CMi9CZ2I_3_o5W-WZiKqZb8unsa5i9ysjJxXoByquFVIx42EphNbZlie8e8_S4nFGr2eTNWnbL_b75KGglamD_7uRKmc-s2_fPv1PTNFlxHEL_a1BNnzYf2Pe874sxdVTb290aopalGzY81C1apH1mFzocs3jCoQChYtpbk40I4jQs03IrAV9W6Z4ylLl23R61kruSRz9oehLPtfbypK3m6L2pwDZyvzA30sh1l8KpufCaPVYtZlp1Odojc7xoidKemPlAnhS" alt="hands holding marble sphere with burgundy nails" />
-            </div>
-            <div className="masonry-item-short bg-surface-container overflow-hidden rounded-lg">
-              <img className="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" src="/images/manicure.jpg" alt="classic manicure" />
-            </div>
-            <div className="masonry-item-tall bg-surface-container overflow-hidden rounded-lg">
-              <img className="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" src="/images/pedicure-spa.jpg" alt="spa pedicure" />
-            </div>
-            <div className="masonry-item-short bg-surface-container overflow-hidden rounded-lg">
-              <img className="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" src="/images/Generated Image March 24, 2026 - 1_13PM.jpg" alt="nail art" />
-            </div>
-            <div className="masonry-item-short bg-surface-container overflow-hidden rounded-lg">
-              <img className="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" src="/images/salon-interior.jpg" alt="salon interior" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <PortfolioSection />
 
       {/* About Section */}
       <section className="bg-[#6B5B52] py-32 text-on-tertiary overflow-hidden">
