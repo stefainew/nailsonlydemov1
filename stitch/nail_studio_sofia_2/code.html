@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="bg"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NAIL STUDIO SOFIA | Изкуството на перфектния маникюр</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=DM+Sans:wght@300;400;500&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Newsreader:ital,wght@0,300;0,400;1,300&amp;family=Manrope:wght@300;400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-line {
+            height: 0.5px;
+            background: linear-gradient(90deg, transparent, #745a27, transparent);
+            width: 100%;
+        }
+        .glass-nav {
+            background: rgba(253, 248, 245, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .satin-button {
+            background: linear-gradient(135deg, #894e46 0%, #c9847a 100%);
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 1.5rem;
+        }
+        .masonry-item-tall { grid-row: span 3; }
+        .masonry-item-short { grid-row: span 2; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "background": "#fdf8f5",
+                "surface-container": "#f2edea",
+                "on-secondary-container": "#795f2b",
+                "on-secondary-fixed": "#261900",
+                "tertiary-container": "#aa9089",
+                "on-secondary-fixed-variant": "#5a4312",
+                "surface-container-highest": "#e6e2df",
+                "tertiary-fixed-dim": "#ddc0b8",
+                "on-tertiary": "#ffffff",
+                "tertiary": "#705953",
+                "surface-dim": "#ded9d6",
+                "on-tertiary-fixed-variant": "#56423c",
+                "secondary": "#745a27",
+                "on-tertiary-fixed": "#281813",
+                "surface-container-lowest": "#ffffff",
+                "secondary-fixed-dim": "#e4c285",
+                "outline": "#857370",
+                "on-tertiary-container": "#3c2a25",
+                "surface-variant": "#e6e2df",
+                "inverse-surface": "#32302e",
+                "on-background": "#1c1b1a",
+                "on-secondary": "#ffffff",
+                "on-error-container": "#93000a",
+                "error-container": "#ffdad6",
+                "on-primary-container": "#4f201a",
+                "surface-tint": "#894e46",
+                "on-surface": "#1c1b1a",
+                "outline-variant": "#d7c2be",
+                "surface-container-high": "#ece7e4",
+                "secondary-container": "#fedb9b",
+                "on-primary-fixed": "#370d09",
+                "primary-fixed": "#ffdad5",
+                "primary-fixed-dim": "#ffb4a9",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#524341",
+                "tertiary-fixed": "#fadcd4",
+                "inverse-on-surface": "#f5f0ed",
+                "error": "#ba1a1a",
+                "primary-container": "#c9847a",
+                "surface-container-low": "#f8f3f0",
+                "secondary-fixed": "#ffdea4",
+                "primary": "#894e46",
+                "on-error": "#ffffff",
+                "surface-bright": "#fdf8f5",
+                "inverse-primary": "#ffb4a9",
+                "on-primary-fixed-variant": "#6d3730",
+                "surface": "#fdf8f5"
+              },
+              fontFamily: {
+                "headline": ["Newsreader"],
+                "body": ["Manrope"],
+                "label": ["Manrope"],
+                "serif-editorial": ["Cormorant Garamond"],
+                "serif-authority": ["Playfair Display"],
+                "sans-ui": ["DM Sans"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background font-sans-ui text-on-background selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav">
+<div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-light tracking-[0.2em] text-on-background font-serif-editorial">NAIL STUDIO</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="text-primary font-medium border-b border-secondary/30 pb-1 font-serif-editorial font-light italic text-lg uppercase tracking-widest" href="#">Начало</a>
+<a class="text-tertiary font-normal hover:text-primary transition-colors duration-500 font-serif-editorial font-light italic text-lg uppercase tracking-widest" href="#">Услуги</a>
+<a class="text-tertiary font-normal hover:text-primary transition-colors duration-500 font-serif-editorial font-light italic text-lg uppercase tracking-widest" href="#">Портфолио</a>
+<a class="text-tertiary font-normal hover:text-primary transition-colors duration-500 font-serif-editorial font-light italic text-lg uppercase tracking-widest" href="#">За нас</a>
+<a class="text-tertiary font-normal hover:text-primary transition-colors duration-500 font-serif-editorial font-light italic text-lg uppercase tracking-widest" href="#">Контакт</a>
+</div>
+<button class="satin-button text-on-primary px-8 py-3 rounded-lg font-medium tracking-wide hover:opacity-90 transition-all duration-500 active:scale-95">Запази час</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="cinematic close-up of a soft-lit hand with impeccable nails on a neutral silk fabric, soft warm lighting, editorial aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiZWSAS5YMUWiWy76rBwQIBzJhKo668_7dHGG-0xzkJh9xYHUwNHgmZC8D1JC862EJMOIwSD72uRYk9Z9gWHb_vey3LlGLyqO2ud0cFdzzVZQps-Hk39iQ2xwmheSkopGlK-W-4SbSkRlir8v91RkTdd4CoimY5UeIpnUVoEJ-r5ri4KsaLGvfP30LaR6YySrsL-N1e5JuZ2mtclYlS41BPdOZwfiPImlsrspvWEfgKH8eW4lCAX74CwB0uILWTeiGTPzdRDrlrZwB"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background/0 via-background/20 to-background"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-5xl">
+<h1 class="font-serif-editorial font-light italic text-6xl md:text-9xl tracking-tight leading-[1.1] text-on-background mb-8">
+<span class="block">Изкуството на</span>
+<span class="block">перфектния маникюр.</span>
+</h1>
+<div class="editorial-line mb-8"></div>
+<p class="font-sans-ui font-light text-xl md:text-2xl tracking-[0.1em] text-tertiary mb-12">
+                Твоите нокти. Нашата страст. Sofia.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<a class="satin-button text-on-primary px-10 py-4 rounded-lg text-lg font-medium tracking-wide shadow-xl shadow-primary/10" href="#">Запази час</a>
+<a class="border border-primary/20 text-primary hover:bg-surface-container-high px-10 py-4 rounded-lg text-lg font-medium tracking-wide transition-all duration-500" href="#">Виж портфолио</a>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 px-8 max-w-screen-2xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-serif-authority text-4xl md:text-6xl text-on-background mb-4">Нашите услуги</h2>
+<p class="font-serif-editorial italic text-xl text-tertiary">Премиум грижа за вашите ръце</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Card 1 -->
+<div class="group p-8 bg-surface-container-low hover:bg-white transition-all duration-700 ease-in-out border-b border-transparent hover:border-secondary/20">
+<div class="h-48 mb-6 overflow-hidden rounded">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="professional nail technician applying neutral nail polish, close up, soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZHdzBx9_ePeVDiWnD_JGzKoSYqtNaU6SiERvdwXTqor5hDbZzicJl7k5FnKqVKD8llDgm1lDQ-U1uj15LuEpMIo1ignxUFEb4d6GR7jOxYODUevzROavO76UdvTaDhq6kft9QqDUp4QhzM53YPuJthLxGFl0cV7hUJICmgJVXJITj44MsfmnQjtgJFCmv6p0lAdbdn7hpGT46qPBddUseCsnXeZGOkF5sw1DxRsojwNNr-aEMmlPCxejJ-CbLzcr-8O1cFSInYE9B"/>
+</div>
+<h3 class="font-serif-authority text-2xl mb-4 text-on-background">Класически маникюр</h3>
+<p class="font-sans-ui font-light text-on-surface-variant leading-relaxed mb-6">Пълна грижа за кутикулите и оформяне, завършено с подхранващо олио.</p>
+<span class="text-primary font-medium tracking-widest text-sm uppercase">от 35 лв</span>
+</div>
+<!-- Card 2 -->
+<div class="group p-8 bg-surface-container-low hover:bg-white transition-all duration-700 ease-in-out border-b border-transparent hover:border-secondary/20">
+<div class="h-48 mb-6 overflow-hidden rounded">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="manicured hands with shiny shellac finish in soft rose color, high end lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg9C6btqbpOu2RHWl7-pZIJAT-v0c_G2Z0EmPhaWUPJpMBUsDmkig8UJ-JyQoGlW5EhtZUnzcI5seK5glBKi16CUWhcYAzgqAGwlRSqgDFcRu7LKcdkLwvWRRweFCL8LLZ-iW2rExP8PNAD_IOsa7xdgFtE5NtozgxZR97MnjpxHhLPsTkYfAcAQwYanP9qNc4XjYLo5wY3Ara5s5ep0tq_wdQbS_pydVo4zlrWRN-4BW8aKlWKH6bqKBwGX0tI8DY1Acq2ZRuIxUv"/>
+</div>
+<h3 class="font-serif-authority text-2xl mb-4 text-on-background">Гел / шелак</h3>
+<p class="font-sans-ui font-light text-on-surface-variant leading-relaxed mb-6">Дълготраен блясък и цвят с професионални продукти от най-висок клас.</p>
+<span class="text-primary font-medium tracking-widest text-sm uppercase">от 55 лв</span>
+</div>
+<!-- Card 3 -->
+<div class="group p-8 bg-surface-container-low hover:bg-white transition-all duration-700 ease-in-out border-b border-transparent hover:border-secondary/20">
+<div class="h-48 mb-6 overflow-hidden rounded">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="nail extensions process, luxury studio setting, focus on detail and craft" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS01vF-lJ5u2J345_tdRTh7Rwach2DnbzwHVndVbI_NAXiLeMyzBMXmnmQyQFaiTH9x04VY-EmZxjPHoXRs1FkgnEIo2c1grW59LM9_HxdcFlmFmVjMwZf4E0YqreXvBvkPcnKIptLmejq6mE5YFew2Wdj6P1hl3kO_E2XjvaYI99tBLudglPgUJT7zFrHtVftFHys_V8LldZxeU4PM_8eycUnWJ2wnktdH0wqJe_6lToa1ZFAO3rUyvQY03znd49y7vEy60n6iYAx"/>
+</div>
+<h3 class="font-serif-authority text-2xl mb-4 text-on-background">Удължаване</h3>
+<p class="font-sans-ui font-light text-on-surface-variant leading-relaxed mb-6">Прецизно изграждане с гел за перфектна дължина и естествен вид.</p>
+<span class="text-primary font-medium tracking-widest text-sm uppercase">от 80 лв</span>
+</div>
+<!-- Card 4 -->
+<div class="group p-8 bg-surface-container-low hover:bg-white transition-all duration-700 ease-in-out border-b border-transparent hover:border-secondary/20">
+<div class="h-48 mb-6 overflow-hidden rounded">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="artistic nail design with delicate gold foil accents, editorial style macro shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR5dneJujnT_GxvFWGgfPcmh3hxi1FQUg0pVbXzm62Dk-O69ZkxXn0kblnzgctuqwF_TtXYHK7FVCWweFZy-cvhVjXSUGMT7nxsGEA0MpfvZ8jARNloAdll1vSSFcHC-A_SH2EQ1go1Hi-Q3iW3sRXci02n2pvTOnIgjD1kLzyH1QEBeREFb-pLU2EQKc6NM4UkXi5gYFhTEcBDbotltQvc2fXjLNfm9e-D0YtPv9h1DGxPgBuZXVjONj3MU-LXqILgb33TH5SILdo"/>
+</div>
+<h3 class="font-serif-authority text-2xl mb-4 text-on-background">Nail Art</h3>
+<p class="font-sans-ui font-light text-on-surface-variant leading-relaxed mb-6">Индивидуален дизайн и ръчно рисувани детайли според вашия стил.</p>
+<span class="text-primary font-medium tracking-widest text-sm uppercase">от 10 лв</span>
+</div>
+</div>
+</section>
+<!-- Section Break Gradient -->
+<div class="h-32 bg-gradient-to-b from-background via-surface-container-low to-white"></div>
+<!-- Portfolio Section -->
+<section class="bg-white py-24">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="font-serif-authority text-5xl text-on-background mb-4">Портфолио</h2>
+<p class="font-serif-editorial italic text-2xl text-tertiary">Нашата работа говори сама за себе си</p>
+</div>
+<a class="text-primary border-b border-primary/30 pb-1 font-sans-ui tracking-widest uppercase text-sm hover:text-secondary hover:border-secondary transition-all" href="#">Виж всички проекти</a>
+</div>
+<div class="masonry-grid">
+<div class="masonry-item-tall bg-surface-container overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" data-alt="elegant dark emerald nail polish with minimal gold line art, luxury aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-vooRcpplpKyVhS_A6bF695qICy55a1Zo8BhABkLeNFZVhNHLihi_gQdTVPJyvA6xj060iTnVEnkQHk55zzPPCZejwskCLiHOLdYSpb7WWgjIyoSkAvjWs_31ppONiI_wQ1KX7aIUaF3bLzBpif7REJIuaGH_36CXUV0UI-3desVS0xuidExl8EWC88qgQXURpoO4SuBidJLFuAcBIEqLcot96J_uGSZ-THBJg4HVQYNvsx8IMgOxjB0YCezVG5t2Krbw0E38-VbZ"/>
+</div>
+<div class="masonry-item-short bg-surface-container overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" data-alt="soft nude manicure with almond shape, clean and professional finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdXXJTdIl1ilfYcj0yeiBhj95BFT6oi9KtsZb6BQoczrFXF2rjVfI6ivivPVblP14B-Qs7-9CJQhoH5rd1idpCFYfoQLXywO1QNU8P1jhXwpfL_EdZxhb2z9JEdn1pHBG-XNAtvtmdm2VAiXoIxyyMUlAXBLARRCC_pvOOQExLhnTt-YMJM_K3HIzkhqloVhTNgVxfwSC8ZJvE6uoM7GQ3lCerHajyieJDQnyd32XIt0C32xhCJbTHFy9Q-Nisee_8nPiUjtq41h3f"/>
+</div>
+<div class="masonry-item-tall bg-surface-container overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" data-alt="modern french manicure with thin silver tip on natural base, artistic photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-RosVlrGyaW6cH0D-d2y9BaLVNk_PnvC_bNfewBao4FfWF9bE-DaBY7wAQIUN9VrR6jMr28TdTqoKij1ELpyQK0csqa24hOd2Js029jDMUjuyzvrmGGbCaDD8ZfsYwb0Nsy1cB-lTgzZkvGVvEg2Dc5TvPpPytO7y3O4WI9vQXR9GJ3yO2prkreu1n9cMm1LxLOkgG9wx4qZj9jtjk6WMzQIc7SFgJBnQV1Ocirgjxx3tuvIRRLmEZMLX7JUjtnLJSZ7IKr4KO-dK"/>
+</div>
+<div class="masonry-item-short bg-surface-container overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" data-alt="close up of hands holding a marble sphere, showing off matte deep burgundy nails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKvK0CMi9CZ2I_3_o5W-WZiKqZb8unsa5i9ysjJxXoByquFVIx42EphNbZlie8e8_S4nFGr2eTNWnbL_b75KGglamD_7uRKmc-s2_fPv1PTNFlxHEL_a1BNnzYf2Pe874sxdVTb290aopalGzY81C1apH1mFzocs3jCoQChYtpbk40I4jQs03IrAV9W6Z4ylLl23R61kruSRz9oehLPtfbypK3m6L2pwDZyvzA30sh1l8KpufCaPVYtZlp1Odojc7xoidKemPlAnhS"/>
+</div>
+<div class="masonry-item-short bg-surface-container overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" data-alt="creative nail art with pastel gradients and small crystal details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3wRZiOk1kKWxHQcc22IExdJ4QFi0nlsOGjXm8i8DPl_zi2qTQC0gEHEbP8zXt-Eb7-6J4-KjfDG5rUgL8exIRI0kvB870ARZyhL0OWTWnF8POadL_x1ZZTLkN7JKiebhRoC2k_0DYIZGnj3oh-aSuCx3ZDLNJivzEMKIgFifdMIvl9qGolaYsGsP_kgo-syAgC7SJBlyQ9Yenw6robRaiGN-TvJKeH-OE8hfqADDG2TKHmXxpU1-JhjIdLv34jo-X2N1V61BojsxM"/>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="bg-[#6B5B52] py-32 text-on-tertiary overflow-hidden">
+<div class="max-w-screen-xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5">
+<h2 class="font-serif-editorial italic text-5xl md:text-7xl mb-8 leading-tight">Кои сме <br/>ние?</h2>
+<p class="font-sans-ui font-light text-xl leading-relaxed mb-12 opacity-90">
+                    В сърцето на София, ние създадохме пространство, където красотата среща спокойствието. Нашата мисия е да подчертаем вашата индивидуалност чрез прецизност и изкуство.
+                </p>
+<div class="editorial-line bg-tertiary-fixed-dim/30 mb-12"></div>
+<div class="flex flex-col gap-12">
+<div class="flex gap-8 items-start">
+<div class="w-32 h-40 shrink-0 overflow-hidden rounded shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="portrait of a professional female nail technician, warm studio lighting, elegant brown attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuwlDOvW6D5M6OI4JAQP-YtrvGYgxSBSpsXDeC0Y-dYenHrU6EC8jGl0L3wOqMXp02PUNB-YAeNp4s-Egd3QdPZ7433nvWK5X2UDKGODqfZ24Jblle3nHdm_QWzMImP4GYPSHArsKc3zqZ63SZlVLRlqk8vI7LqWIzkiTo8w1tpPdyOw5qBaDytL3p4HWFyMgB2Oz0cvj8HLChK05nqOYtuRRjyb_NCUmg56XKg7U52qMeDs4fEPJ66I42sDBZWaq-Y1G0pCUhac35"/>
+</div>
+<div>
+<h4 class="font-serif-editorial text-3xl mb-2">Елена Костова</h4>
+<p class="font-sans-ui font-light opacity-80 italic mb-4">Основател &amp; Топ Маникюрист</p>
+<p class="font-sans-ui text-sm font-light leading-relaxed">Над 10 години опит в индустрията, специализираща в Nail Art и изграждане.</p>
+</div>
+</div>
+<div class="flex gap-8 items-start">
+<div class="w-32 h-40 shrink-0 overflow-hidden rounded shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="portrait of a young female stylist with creative flair, professional aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnoLn51iZznwuXXFbOOaH8V85KlaPzDVvUXONu5H-TrDAudoXtqQ_Jok7Gd3lsjmV6Cf6lh2UwxNTIzM8l8kuXMMwem6HrNzUuYnh75NCBSoUQKEXWDxOosOL6podcElH2086enClYylgx1oy5hFQWlppFvl4E0TBOXDK7802l6I196QEu2AGR5KTnrHeNKzH0vj8Kgd7roi_VwOM17XrRcsXtfXfgdQy04MgonfwBynhUzThsKfhZGyjH1hbU_0U8Nl5WpfBqrRxx"/>
+</div>
+<div>
+<h4 class="font-serif-editorial text-3xl mb-2">София Димитрова</h4>
+<p class="font-sans-ui font-light opacity-80 italic mb-4">Мастер Маникюрист</p>
+<p class="font-sans-ui text-sm font-light leading-relaxed">Експерт в терапевтичния маникюр и иновативните техники за гел лак.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 relative">
+<div class="aspect-[4/5] rounded-lg overflow-hidden relative z-10">
+<img class="w-full h-full object-cover" data-alt="interior of a luxury nail studio in Sofia, warm minimalist decor, high end furniture, soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsZvVpQP7nXiQgkPRmBXN3i09jhZu6fxbJwJVVifgP-dSa74gEQDUA8GLfkjQi7GmkGPA--IE40xswTSvofv8YalgFuuzSXGxonW_W092p-OLsdHGlZltg4xu6iywnizM-hEhvsur31Qq9hmjAl-zf7tFxxjpzq5Bh--1z1aneHXqNgM2JxfyT2sktdhpYICt5lmSEkffy7JgW_7MgnQwzqk74f6jgAgZSzkmTTH7kvXPGtohaJbR3eLpWZHCw_M3CSWzjKA6I8eLW"/>
+</div>
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-0"></div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-32 bg-background relative overflow-hidden">
+<div class="max-w-4xl mx-auto px-8 text-center">
+<span class="material-symbols-outlined text-8xl text-primary/10 mb-8 block select-none">format_quote</span>
+<blockquote class="font-serif-editorial italic text-3xl md:text-5xl text-on-background leading-tight mb-12">
+                "Открих своето място за красота. Екипът е невероятен, а резултатите — безупречни. Всеки детайл е обмислен с любов."
+            </blockquote>
+<div class="editorial-line w-24 mx-auto mb-8 bg-secondary/30"></div>
+<cite class="not-italic block">
+<span class="font-sans-ui font-medium text-lg text-on-background block mb-1">Мария Г.</span>
+<span class="font-sans-ui font-light text-tertiary tracking-widest uppercase text-sm">Гел маникюр</span>
+</cite>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-tertiary text-on-tertiary">
+<div class="flex flex-col items-center text-center px-4 w-full pt-20 pb-10 max-w-screen-2xl mx-auto">
+<div class="text-3xl font-light text-background tracking-widest mb-4 font-serif-editorial">NAIL STUDIO SOFIA</div>
+<div class="flex gap-10 mb-12 mt-8">
+<a class="text-background/70 hover:text-primary-container transition-colors duration-500 font-sans-ui text-sm uppercase tracking-widest" href="#">Instagram</a>
+<a class="text-background/70 hover:text-primary-container transition-colors duration-500 font-sans-ui text-sm uppercase tracking-widest" href="#">Facebook</a>
+<a class="text-background/70 hover:text-primary-container transition-colors duration-500 font-sans-ui text-sm uppercase tracking-widest" href="#">Contact</a>
+</div>
+<div class="editorial-line bg-background/10 mb-12"></div>
+<p class="font-sans-ui font-light text-background/50 text-sm">
+                © 2024 NAIL STUDIO SOFIA. Красотата е в детайлите.
+            </p>
+</div>
+</footer>
+<!-- Floating Booking Bar (Mobile Only) -->
+<div class="md:hidden fixed bottom-8 left-8 right-8 z-50">
+<button class="w-full satin-button text-on-primary py-4 rounded-lg font-medium shadow-2xl backdrop-blur-lg flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+            Запази час сега
+        </button>
+</div>
+</body></html>

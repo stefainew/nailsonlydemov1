@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="bg"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=DM+Sans:wght@300;400;500&amp;family=Playfair+Display:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#f5f0ed",
+              "on-surface": "#1c1b1a",
+              "on-error-container": "#93000a",
+              "secondary-container": "#fedb9b",
+              "on-secondary-fixed-variant": "#5a4312",
+              "on-primary-fixed-variant": "#6d3730",
+              "on-tertiary-fixed": "#281813",
+              "on-error": "#ffffff",
+              "primary": "#894e46",
+              "surface": "#fdf8f5",
+              "on-secondary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-primary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#f2edea",
+              "inverse-surface": "#32302e",
+              "on-tertiary-fixed-variant": "#56423c",
+              "on-primary-container": "#4f201a",
+              "secondary-fixed": "#ffdea4",
+              "tertiary-container": "#aa9089",
+              "tertiary-fixed": "#fadcd4",
+              "surface-variant": "#e6e2df",
+              "secondary-fixed-dim": "#e4c285",
+              "primary-fixed-dim": "#ffb4a9",
+              "error-container": "#ffdad6",
+              "surface-tint": "#894e46",
+              "surface-dim": "#ded9d6",
+              "surface-bright": "#fdf8f5",
+              "surface-container-low": "#f8f3f0",
+              "surface-container-highest": "#e6e2df",
+              "on-tertiary-container": "#3c2a25",
+              "outline": "#857370",
+              "on-surface-variant": "#524341",
+              "outline-variant": "#d7c2be",
+              "surface-container-high": "#ece7e4",
+              "secondary": "#745a27",
+              "primary-container": "#c9847a",
+              "on-secondary-fixed": "#261900",
+              "tertiary": "#705953",
+              "background": "#fdf8f5",
+              "primary-fixed": "#ffdad5",
+              "inverse-primary": "#ffb4a9",
+              "tertiary-fixed-dim": "#ddc0b8",
+              "on-secondary-container": "#795f2b",
+              "on-background": "#1c1b1a",
+              "on-primary-fixed": "#370d09"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"],
+              "editorial": ["Cormorant Garamond", "serif"],
+              "authority": ["Playfair Display", "serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .editorial-italic { font-family: 'Cormorant Garamond', serif; font-style: italic; }
+      .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+      .shimmer-line {
+        height: 0.5px;
+        background: linear-gradient(90deg, transparent, #745a27, transparent);
+      }
+      .satin-cta {
+        background: linear-gradient(135deg, #894e46, #c9847a);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-6 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-xl border-b border-rose-100/20 dark:border-rose-900/20 z-50 shadow-sm dark:shadow-none">
+<div class="font-['Playfair_Display'] text-2xl tracking-tight text-rose-900 dark:text-rose-100">Nail Studio Sofia</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-['Cormorant_Garamond'] text-lg italic text-stone-600 dark:text-stone-400 hover:text-rose-600 dark:hover:text-rose-300 transition-colors" href="#">Services</a>
+<a class="font-['Cormorant_Garamond'] text-lg italic text-stone-600 dark:text-stone-400 hover:text-rose-600 dark:hover:text-rose-300 transition-colors" href="#">Portfolio</a>
+<a class="font-['Cormorant_Garamond'] text-lg italic text-stone-600 dark:text-stone-400 hover:text-rose-600 dark:hover:text-rose-300 transition-colors" href="#">About</a>
+<a class="font-['Cormorant_Garamond'] text-lg italic text-rose-700 dark:text-rose-300 border-b border-rose-700 dark:border-rose-300 pb-1" href="#">Book Now</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-['Cormorant_Garamond'] text-lg italic text-stone-600 dark:text-stone-400 hover:opacity-80 transition-opacity duration-500">Login</button>
+<button class="md:hidden text-rose-800">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<header class="relative px-8 py-24 md:py-32 overflow-hidden flex flex-col items-center text-center">
+<div class="absolute inset-0 -z-10 opacity-30">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary-container rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-tertiary-fixed rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2"></div>
+</div>
+<h1 class="font-authority text-5xl md:text-7xl lg:text-8xl text-on-surface-variant leading-tight mb-6">
+                Нашите <span class="editorial-italic font-light">Услуги</span>
+</h1>
+<p class="max-w-2xl font-body text-on-surface-variant/80 text-lg md:text-xl font-light tracking-wide leading-relaxed">
+                Потопете се в свят на изтънченост и детайл. Всяка процедура в Nail Studio Sofia е ритуал за красота, изпълнен с най-висококачествени материали и артистичен замах.
+            </p>
+<div class="mt-12 shimmer-line w-48 mx-auto"></div>
+</header>
+<!-- Services Bento Grid Section -->
+<section class="max-w-7xl mx-auto px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Classic Manicure - Large Featured Card -->
+<div class="md:col-span-7 group">
+<div class="relative overflow-hidden rounded-lg aspect-[16/10] mb-6">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="close-up of elegant classic manicure on pale skin with soft natural lighting and neutral silk background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL9WiLTjsv2CSUevXWZ1IC1he5quQbwMlBG2AoavQC5Lm8dKmBv0JeDX97ogwIytENdY94qmCrBhC_By8mpf4tvIyQpr6uOHC7EnxuI4H5o5GUuiPNRzeTqSe5AMF8nadczkO04G9QGySz-aDzOA5JcMw_iekjhMMyDn4cNmyP2K_bYK-ZY-GzVaHUNcbSqCw4l9_8RLgw_EywTqDMR4s8JAAEyDHKV0Ogp0myXbG2Ksd1qKXYgxzV4kvAJRhU0A6RWBr72Xr8llOS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h2 class="font-authority text-3xl mb-1">Класически маникюр</h2>
+<p class="font-editorial italic text-lg opacity-90">Чистота и прецизност в детайла</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-lg shadow-sm">
+<p class="text-on-surface-variant font-light mb-6 leading-relaxed">
+                            Пълна грижа за вашите ръце, включваща оформяне на свободен край, почистване на кутикула с апаратен или комбиниран метод и подхранващ финиш.
+                        </p>
+<div class="flex justify-between items-center border-t border-outline-variant/20 pt-6">
+<span class="font-label text-sm uppercase tracking-widest text-secondary flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 45 - 60 мин.
+                            </span>
+<span class="font-authority text-2xl text-primary">от 35 лв.</span>
+</div>
+</div>
+</div>
+<!-- Gel / Shellac - Vertical Card -->
+<div class="md:col-span-5 flex flex-col h-full">
+<div class="bg-surface-container-highest p-8 rounded-lg flex-grow mb-8 border border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h2 class="font-authority text-3xl text-on-surface mb-2">Гел / шелак</h2>
+<p class="font-editorial italic text-primary text-xl">Дълготраен блясък</p>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl" data-weight="fill">verified</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex justify-between items-end gap-4">
+<span class="font-label text-on-surface-variant">Поставяне на гел лак</span>
+<div class="flex-grow border-b border-dotted border-outline-variant mb-1"></div>
+<span class="font-authority text-primary">45 лв.</span>
+</li>
+<li class="flex justify-between items-end gap-4">
+<span class="font-label text-on-surface-variant">Сваляне + нов маникюр</span>
+<div class="flex-grow border-b border-dotted border-outline-variant mb-1"></div>
+<span class="font-authority text-primary">55 лв.</span>
+</li>
+<li class="flex justify-between items-end gap-4">
+<span class="font-label text-on-surface-variant">Укрепване с база</span>
+<div class="flex-grow border-b border-dotted border-outline-variant mb-1"></div>
+<span class="font-authority text-primary">+10 лв.</span>
+</li>
+</ul>
+<p class="text-sm font-light text-on-surface-variant italic mb-6">
+                            Работим с премиум брандове, които осигуряват до 4 седмици безупречен вид без увреждане на нокътната плочка.
+                        </p>
+<button class="w-full py-4 satin-cta text-on-primary font-label text-sm uppercase tracking-widest rounded-lg hover:opacity-90 transition-all">Запази час</button>
+</div>
+<div class="rounded-lg overflow-hidden flex-shrink-0 aspect-square md:aspect-auto md:h-64">
+<img alt="" class="w-full h-full object-cover" data-alt="bottles of high-end nail polish in dusty rose and nude tones arranged on a reflective marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJto8vHXN_uT692bB0aWiPIoxfS2z0frmuUWperXLpN41eLzk3Ha7WiGkG24tOOH4D8-v0iVRbbGwg87mysNnwnbNA7SjoUjbwBYOzceqmJDhRp4xGokD4-wzhcu_bCSiuNwottF5SMqYESCroT-W5vFwUofgFuQLTWDiyHWUCh0MlgobCEToOyvHz3vQvzEm7fIadFopDcdaI8XXp2Np5ixeAaHSvX6GhsgvdrLtjy6w8oPh8SRoxsdKI-lD6VuVKn7c6j2ECSF4l"/>
+</div>
+</div>
+<!-- Nail Art - Wide Section -->
+<div class="md:col-span-12 grid md:grid-cols-2 bg-tertiary rounded-lg overflow-hidden text-on-tertiary mt-8">
+<div class="p-12 flex flex-col justify-center">
+<h2 class="font-authority text-4xl mb-4">Nail Art &amp; Дизайн</h2>
+<p class="font-editorial italic text-2xl mb-8 opacity-80">Вашите нокти като платно</p>
+<div class="space-y-6">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined mt-1 text-secondary-fixed">brush</span>
+<div>
+<h4 class="font-authority text-xl">Ръчна рисунка</h4>
+<p class="font-light text-on-tertiary/70 text-sm">Уникални флорални и геометрични мотиви, създадени специално за вас.</p>
+<span class="inline-block mt-2 font-authority text-secondary-fixed">от 5 лв / нокът</span>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined mt-1 text-secondary-fixed">flare</span>
+<div>
+<h4 class="font-authority text-xl">Инкрустация с кристали</h4>
+<p class="font-light text-on-tertiary/70 text-sm">Прецизно поставяне на камъни Swarovski и метални елементи.</p>
+<span class="inline-block mt-2 font-authority text-secondary-fixed">от 2 лв / нокът</span>
+</div>
+</div>
+</div>
+</div>
+<div class="h-96 md:h-full min-h-[400px] relative">
+<img alt="" class="absolute inset-0 w-full h-full object-cover" data-alt="macro shot of intricate minimalist nail art with delicate gold lines and abstract botanical shapes on nude base" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuaDlOH9m37890oukgkZ43ct7KaeekIlGnrtlR9i3636F76h5hl_Xxr0o2UgXe_BIkTgqkgH6BuwyUtEIDO6NQw4aGSa5Pl2nOF8jkMoymwECxswgfZBzGLTCTDfor_SIRk2gNNPYDACBo8MlvN5rv0GAfrk8JZHjQqJzsSM1NQd6HszXvZPz82Bu5wXAlvRur-AkJ5I3-t8RdgFYApXh940xY0ESwL45KFWVKy3cTA4Doq-fR3BVkV30LUM8UoR135ODsd3BiP6vz"/>
+</div>
+</div>
+<!-- Extensions Card -->
+<div class="md:col-span-12 lg:col-span-6 mt-8">
+<div class="group relative bg-surface-container p-12 rounded-lg border border-outline-variant/10 hover:bg-surface-container-high transition-colors">
+<div class="mb-8">
+<span class="inline-block px-4 py-1 rounded-full border border-primary text-primary font-editorial italic text-sm mb-4">Премиум грижа</span>
+<h2 class="font-authority text-4xl text-on-surface">Удължаване с гел</h2>
+</div>
+<p class="text-on-surface-variant font-light text-lg mb-8 max-w-lg">
+                            Създаваме перфектната форма и дължина, която изглежда напълно естествено. Използваме хипоалергенни материали за максимална здравина и комфорт.
+                        </p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h4 class="font-label text-xs uppercase tracking-[0.2em] text-secondary mb-2">Времетраене</h4>
+<p class="font-authority text-xl">120 - 150 мин.</p>
+</div>
+<div>
+<h4 class="font-label text-xs uppercase tracking-[0.2em] text-secondary mb-2">Цена</h4>
+<p class="font-authority text-xl">от 85 лв.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Specialized Care Image/Teaser -->
+<div class="md:col-span-12 lg:col-span-6 mt-8 h-full">
+<div class="relative h-full min-h-[400px] rounded-lg overflow-hidden group">
+<img alt="" class="absolute inset-0 w-full h-full object-cover" data-alt="luxury spa environment with soft lighting, glass of water with lemon, and professional manicure tools on a white towel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC27n6QC1Tn3jyiNQ8HTq_VvTMTTFXToA579uHuOiJqkKd6ZR8adTaRT5mgc5n9z6mezvYZGb9Q5gvydkio_aYK_ZUazpIRzZJVRIBU4oaPabm6h2mfvYkVzg0DSMUXypzyBWzJhOyFVrcxTKPzRturOBctQIeEVG9-nmFUBFihL_GY-G3x6xz0sg2LS4AUeP7U4Vmu1WL3ySwSa3KpV2QZGYv4Y23nnu6v0hfUsbLA9pVlq5xysSSvPP9yDma2VXj4Q3hblnozoyJ2"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors"></div>
+<div class="absolute inset-x-8 bottom-8 p-8 bg-surface/90 backdrop-blur-md rounded-lg">
+<h3 class="font-authority text-2xl text-on-surface mb-2">Терапия за ръце</h3>
+<p class="font-body text-sm font-light text-on-surface-variant">Парафинова вана и релаксиращ масаж за кадифена кожа.</p>
+<a class="inline-block mt-4 font-editorial italic text-primary hover:tracking-wider transition-all underline underline-offset-4" href="#">Научете повече</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-8 text-center bg-surface-container-low border-t border-outline-variant/10">
+<h2 class="font-authority text-4xl md:text-5xl text-on-surface mb-8">Готови ли сте за своята <span class="editorial-italic">трансформация?</span></h2>
+<p class="max-w-xl mx-auto font-body font-light text-on-surface-variant mb-12">
+                Запазете своя час онлайн лесно и бързо или ни се обадете за персонална консултация.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="px-10 py-4 satin-cta text-on-primary font-label text-sm uppercase tracking-widest rounded-lg shadow-lg hover:translate-y-[-2px] transition-all">
+                    Онлайн Резервация
+                </button>
+<button class="px-10 py-4 border border-outline text-on-surface font-label text-sm uppercase tracking-widest rounded-lg hover:bg-surface-container-highest transition-all">
+                    Свържете се с нас
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 py-12 px-8">
+<div class="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-['Playfair_Display'] text-xl text-rose-900 dark:text-rose-50">Nail Studio Sofia</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['DM_Sans'] font-light tracking-wide text-sm text-stone-500 dark:text-stone-400 hover:text-rose-700 dark:hover:text-rose-300 transition-all duration-300" href="#">Privacy Policy</a>
+<a class="font-['DM_Sans'] font-light tracking-wide text-sm text-stone-500 dark:text-stone-400 hover:text-rose-700 dark:hover:text-rose-300 transition-all duration-300" href="#">Terms of Service</a>
+<a class="font-['DM_Sans'] font-light tracking-wide text-sm text-stone-500 dark:text-stone-400 hover:text-rose-700 dark:hover:text-rose-300 transition-all duration-300" href="#">Contact</a>
+<a class="font-['DM_Sans'] font-light tracking-wide text-sm text-stone-500 dark:text-stone-400 hover:text-rose-700 dark:hover:text-rose-300 transition-all duration-300" href="#">Instagram</a>
+</div>
+<div class="font-['DM_Sans'] font-light tracking-wide text-sm text-rose-900 dark:text-rose-100 opacity-60">
+                © 2024 Nail Studio Sofia. Handcrafted Elegance.
+            </div>
+</div>
+</footer>
+</body></html>

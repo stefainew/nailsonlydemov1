@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="bg"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nail Studio Sofia - Портфолио</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Playfair+Display:wght@400;500;600;700;800;900&amp;family=DM+Sans:wght@300;400;500;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#f5f0ed",
+              "on-surface": "#1c1b1a",
+              "on-error-container": "#93000a",
+              "secondary-container": "#fedb9b",
+              "on-secondary-fixed-variant": "#5a4312",
+              "on-primary-fixed-variant": "#6d3730",
+              "on-tertiary-fixed": "#281813",
+              "on-error": "#ffffff",
+              "primary": "#894e46",
+              "surface": "#fdf8f5",
+              "on-secondary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-primary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#f2edea",
+              "inverse-surface": "#32302e",
+              "on-tertiary-fixed-variant": "#56423c",
+              "on-primary-container": "#4f201a",
+              "secondary-fixed": "#ffdea4",
+              "tertiary-container": "#aa9089",
+              "tertiary-fixed": "#fadcd4",
+              "surface-variant": "#e6e2df",
+              "secondary-fixed-dim": "#e4c285",
+              "primary-fixed-dim": "#ffb4a9",
+              "error-container": "#ffdad6",
+              "surface-tint": "#894e46",
+              "surface-dim": "#ded9d6",
+              "surface-bright": "#fdf8f5",
+              "surface-container-low": "#f8f3f0",
+              "surface-container-highest": "#e6e2df",
+              "on-tertiary-container": "#3c2a25",
+              "outline": "#857370",
+              "on-surface-variant": "#524341",
+              "outline-variant": "#d7c2be",
+              "surface-container-high": "#ece7e4",
+              "secondary": "#745a27",
+              "primary-container": "#c9847a",
+              "on-secondary-fixed": "#261900",
+              "tertiary": "#705953",
+              "background": "#fdf8f5",
+              "primary-fixed": "#ffdad5",
+              "inverse-primary": "#ffb4a9",
+              "tertiary-fixed-dim": "#ddc0b8",
+              "on-secondary-container": "#795f2b",
+              "on-background": "#1c1b1a",
+              "on-primary-fixed": "#370d09"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-grid {
+            column-count: 1;
+            column-gap: 2rem;
+        }
+        @media (min-width: 768px) { .editorial-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .editorial-grid { column-count: 3; } }
+        
+        .shimmer-line {
+            height: 0.5px;
+            background: linear-gradient(90deg, transparent, #745a27, transparent);
+            opacity: 0.3;
+        }
+        .silk-satin-btn {
+            background: linear-gradient(135deg, #894e46, #c9847a);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-8 py-6 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-xl border-b border-rose-100/20 dark:border-rose-900/20 shadow-sm dark:shadow-none z-50">
+<div class="font-['Playfair_Display'] text-2xl tracking-tight text-rose-900 dark:text-rose-100">
+            Nail Studio Sofia
+        </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-['Cormorant_Garamond'] text-lg italic text-stone-600 dark:text-stone-400 hover:text-rose-600 dark:hover:text-rose-300 transition-colors hover:opacity-80 duration-500" href="#">Services</a>
+<a class="font-['Cormorant_Garamond'] text-lg italic text-rose-700 dark:text-rose-300 border-b border-rose-700 dark:border-rose-300 pb-1 hover:opacity-80 transition-opacity duration-500" href="#">Portfolio</a>
+<a class="font-['Cormorant_Garamond'] text-lg italic text-stone-600 dark:text-stone-400 hover:text-rose-600 dark:hover:text-rose-300 transition-colors hover:opacity-80 duration-500" href="#">About</a>
+<a class="font-['Cormorant_Garamond'] text-lg italic text-stone-600 dark:text-stone-400 hover:text-rose-600 dark:hover:text-rose-300 transition-colors hover:opacity-80 duration-500" href="#">Book Now</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="font-['DM_Sans'] font-light tracking-wide text-sm text-rose-900 dark:text-rose-100 hover:opacity-80 transition-opacity duration-500">Login</button>
+<button class="md:hidden material-symbols-outlined text-rose-900">menu</button>
+</div>
+</header>
+<main class="pt-32 pb-24">
+<!-- Hero Section -->
+<section class="px-8 max-w-7xl mx-auto mb-20 text-center">
+<h1 class="font-headline text-8xl md:text-9xl text-primary lowercase tracking-tighter leading-[0.8] mb-6">
+                Портфолио
+            </h1>
+<p class="font-['Cormorant_Garamond'] text-2xl italic text-on-surface-variant max-w-2xl mx-auto">
+                Discover the art of meticulous detail and the soft-focus elegance of hand-sculpted aesthetics.
+            </p>
+<div class="shimmer-line mt-12 w-1/3 mx-auto"></div>
+</section>
+<!-- Category Filters -->
+<section class="px-8 max-w-7xl mx-auto mb-16 overflow-x-auto">
+<div class="flex md:justify-center items-center gap-12 min-w-max pb-4">
+<button class="group relative py-2 font-['DM_Sans'] text-sm tracking-[0.2em] text-primary font-medium">
+                    ALL
+                    <span class="absolute bottom-0 left-0 w-full h-[1px] bg-secondary scale-x-100 transition-transform origin-center"></span>
+</button>
+<button class="group relative py-2 font-['DM_Sans'] text-sm tracking-[0.2em] text-on-surface-variant hover:text-primary transition-colors">
+                    MINIMAL
+                    <span class="absolute bottom-0 left-0 w-full h-[1px] bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-500"></span>
+</button>
+<button class="group relative py-2 font-['DM_Sans'] text-sm tracking-[0.2em] text-on-surface-variant hover:text-primary transition-colors">
+                    LUXURY
+                    <span class="absolute bottom-0 left-0 w-full h-[1px] bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-500"></span>
+</button>
+<button class="group relative py-2 font-['DM_Sans'] text-sm tracking-[0.2em] text-on-surface-variant hover:text-primary transition-colors">
+                    ARTISTIC
+                    <span class="absolute bottom-0 left-0 w-full h-[1px] bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-500"></span>
+</button>
+</div>
+</section>
+<!-- Portfolio Gallery -->
+<section class="px-8 max-w-[1600px] mx-auto">
+<div class="editorial-grid">
+<!-- Gallery Item 1 -->
+<div class="break-inside-avoid mb-8 group cursor-pointer">
+<div class="overflow-hidden rounded-lg bg-surface-container-low transition-all duration-700">
+<img class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Close-up of minimalist almond-shaped nails with a soft pearl sheen in a sunlit high-end studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjIMPp05VlstUN1ZflcfTkPAGiMuYYwPULzs8q77EMRdTTwgJyDuusKB-TiPvwA2fc0DPA7lUC30y0OrEdlHdv8ferGcqpZaxYIqIevc3WNH1JnVqmv1-my85dtu4z0rX8cS_vxZ5p-tE-b4LTkwsena_GF_eYeQHDGcskxs95PyPzwbIK5jD9pjxgy9JauIkCvh1oym3ZauDzj88IGfheWmTffZJARcJ75qPAEbSApMMsQZoDeH7RGYCxA7GWP8qzHOC-Zha20zTq"/>
+</div>
+<div class="mt-4 flex justify-between items-baseline">
+<h3 class="font-['Playfair_Display'] text-xl text-on-surface">Pearlescent Minimal</h3>
+<span class="font-['Cormorant_Garamond'] italic text-on-surface-variant">Minimal</span>
+</div>
+</div>
+<!-- Gallery Item 2 - Offset Middle Column Logic -->
+<div class="break-inside-avoid mb-8 group cursor-pointer md:mt-12">
+<div class="overflow-hidden rounded-lg bg-surface-container-low transition-all duration-700">
+<img class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Luxury deep rose red manicure with gold leaf accents on a silk fabric background, soft dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf7oUKf18wvqisMXQnYNtyiiHFdTgeOdJKb2gcrq47yCgTuFac6oZ4mQbGLBGXSobqkNcpRy8zT9sJ2SRphVyuD-9eIDFPXHJUQ0sKGbxe89pMjJ_nYV0VBPxv2ygq4dE0c7G2iT7U7nCpCrN2WwC3qXbAn1ca_nFV8uKb7LALFoiQmjSFkgEca-39Hv6pOXyvUZMtYTBSK-tH_ROZhPQw5JjU1sIhaWrLl56G6fE6krPkiFgrFgcnJBDuX4oJ_Gh_k3JpGmMywuI3"/>
+</div>
+<div class="mt-4 flex justify-between items-baseline">
+<h3 class="font-['Playfair_Display'] text-xl text-on-surface">Royal Velvet &amp; Gold</h3>
+<span class="font-['Cormorant_Garamond'] italic text-on-surface-variant">Luxury</span>
+</div>
+</div>
+<!-- Gallery Item 3 -->
+<div class="break-inside-avoid mb-8 group cursor-pointer">
+<div class="overflow-hidden rounded-lg bg-surface-container-low transition-all duration-700">
+<img class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Artistic abstract nail design with soft watercolor swirls of blush and taupe, macro photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIO9bKJxQcElV7Y4UAHw5kwB86178mAw7dK1VWXg-6bdnN90O7InYo-hoqi7T8Brigemp5ycyKRpDscReqbEiyM4LGVcJuw3W8qg7qUpmrnxuFqlgRZbPXRscF8dSZQzIXw4mPJBose0pOktDg0uSRHZZTVlzHxuUOsQ7tN7-2EN7kFNLv3fJfW4rP4wHQHWM3j4Us4UA9AQ-UhCz-rsUTkaSrgUbAAmbYxtkOvXON5hxuoqv3Dcxd60jGuurWRyi8T_qgrrB1boyI"/>
+</div>
+<div class="mt-4 flex justify-between items-baseline">
+<h3 class="font-['Playfair_Display'] text-xl text-on-surface">Watercolor Dreams</h3>
+<span class="font-['Cormorant_Garamond'] italic text-on-surface-variant">Artistic</span>
+</div>
+</div>
+<!-- Gallery Item 4 -->
+<div class="break-inside-avoid mb-8 group cursor-pointer">
+<div class="overflow-hidden rounded-lg bg-surface-container-low transition-all duration-700">
+<img class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Clean aesthetic nude nails holding a designer perfume bottle, bright airy minimalist photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM5xifz_PJMNU8cZLHXXwz4vPeTPJwDCbtsCtkutfSwPuycq8HUOYVvaJ0A66d1PxWqvOwefuiMCzhwFcOdOIF2OKpYxI6GP6FfD0zqpDKgId40chkd1XGnvFML0FuisdLzbLjReB7ugp1dKWa2FsbRvCU2F1g3zxYg4eK_5dzL7QBa_k8w83TEAh9pwTeP23P1XlG0puFO53_-mfkK2xvHNqiSQthuSr8Ikty3wUS_7pjfurxcah5uESH9RU4lXxUSvdbsLO0Fmam"/>
+</div>
+<div class="mt-4 flex justify-between items-baseline">
+<h3 class="font-['Playfair_Display'] text-xl text-on-surface">Pure Nude Aesthetic</h3>
+<span class="font-['Cormorant_Garamond'] italic text-on-surface-variant">Minimal</span>
+</div>
+</div>
+<!-- Gallery Item 5 -->
+<div class="break-inside-avoid mb-8 group cursor-pointer md:mt-24">
+<div class="overflow-hidden rounded-lg bg-surface-container-low transition-all duration-700">
+<img class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Intricate geometric nail art with chrome metallic lines and matte finish, cinematic shadow play" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADulXgopcm9s4dUHhPuIlMPtFzmst8eLxMeDmLkqmIEQ8WaJRzO80Fmop6dYdx-QHZb0rNceyXvPW_Y6QTismcnhePClBToLIZlLq6S5Cg1MK1OZBHCUDrr4DQyG3Lg72FzD4AyrN6ljz97m9jalR_O7WsyGLUdckdAERT8gr7fnM-aidxDWRFC_j8fu7AHAXTMIjVS9hHbTPDFkNfEgeKQ2UNIoET6Gk7jeqjerJQVQPglembQheXbvQbm9b7MVbPg-rF4M_iwaOo"/>
+</div>
+<div class="mt-4 flex justify-between items-baseline">
+<h3 class="font-['Playfair_Display'] text-xl text-on-surface">Chrome Geometry</h3>
+<span class="font-['Cormorant_Garamond'] italic text-on-surface-variant">Artistic</span>
+</div>
+</div>
+<!-- Gallery Item 6 -->
+<div class="break-inside-avoid mb-8 group cursor-pointer">
+<div class="overflow-hidden rounded-lg bg-surface-container-low transition-all duration-700">
+<img class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Classic French manicure reinvented with thin gold tips on high-gloss finish, luxury jewelry in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRntj6UmsCVICO_u-C_TDQVYS9FrAvXJNXOzPYG_1XcdnW1ZNVobeu9hcB6Eg1u_YrsHx16n9dNzerpvHXSH8-XLgzLyToMCUhS1OZThJkKCGJ6Ygtb6WWP5KujLhQOQHp3QCR2FW59xjFNMc_kaE88tH9ABmq3OmV7RsEtKU-etL1FaDpgFx_HsUNzN9Ix8VyxNI2MxiWWdsqZreeURpha2Sw1ihh8XMEOQaHs_vI6xVg0g1aq-nijq9ljfJUWjN_uTC21XQ8A5cg"/>
+</div>
+<div class="mt-4 flex justify-between items-baseline">
+<h3 class="font-['Playfair_Display'] text-xl text-on-surface">Gilded French</h3>
+<span class="font-['Cormorant_Garamond'] italic text-on-surface-variant">Luxury</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section with Tonal Sculpting -->
+<section class="mt-32 px-8 py-24 bg-tertiary/10 relative overflow-hidden">
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<h2 class="font-headline text-5xl md:text-7xl text-primary lowercase mb-8">Запазете Своя Час</h2>
+<p class="font-['DM_Sans'] font-light text-lg text-on-surface-variant mb-12">
+                    Experience the ultimate in bespoke nail care and artistic expression.
+                </p>
+<button class="silk-satin-btn px-12 py-5 text-on-primary font-['DM_Sans'] font-medium tracking-widest text-sm rounded shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-500">
+                    BOOK AN APPOINTMENT
+                </button>
+</div>
+<!-- Decorative gradient backgrounds -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 w-full py-12 px-8">
+<div class="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="font-['Playfair_Display'] text-xl text-rose-900 dark:text-rose-50">Nail Studio Sofia</div>
+<p class="font-['DM_Sans'] font-light tracking-wide text-sm text-stone-500 dark:text-stone-400">© 2024 Nail Studio Sofia. Handcrafted Elegance.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['DM_Sans'] font-light tracking-wide text-sm text-stone-500 dark:text-stone-400 hover:text-rose-700 dark:hover:text-rose-300 transition-all duration-300" href="#">Privacy Policy</a>
+<a class="font-['DM_Sans'] font-light tracking-wide text-sm text-stone-500 dark:text-stone-400 hover:text-rose-700 dark:hover:text-rose-300 transition-all duration-300" href="#">Terms of Service</a>
+<a class="font-['DM_Sans'] font-light tracking-wide text-sm text-stone-500 dark:text-stone-400 hover:text-rose-700 dark:hover:text-rose-300 transition-all duration-300" href="#">Contact</a>
+<a class="font-['DM_Sans'] font-light tracking-wide text-sm text-stone-500 dark:text-stone-400 hover:text-rose-700 dark:hover:text-rose-300 transition-all duration-300" href="#">Instagram</a>
+</div>
+</div>
+</footer>
+<!-- Floating Booking Bar (Mobile Only) -->
+<div class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] bg-surface/80 backdrop-blur-xl px-6 py-4 rounded shadow-2xl z-50 flex justify-between items-center border border-outline-variant/10">
+<span class="font-['Playfair_Display'] font-semibold text-primary">Nail Studio</span>
+<button class="silk-satin-btn px-6 py-2 text-on-primary text-xs font-medium rounded tracking-widest">BOOK NOW</button>
+</div>
+</body></html>
